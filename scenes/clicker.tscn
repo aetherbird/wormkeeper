@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://blgpjnfrti040"]
+
+[ext_resource type="Texture2D" uid="uid://bmd2udq0oge5m" path="res://assets/graphics/clean_backyard.png" id="1_1l2ym"]
+[ext_resource type="Texture2D" uid="uid://3fihdovvl00q" path="res://assets/graphics/worm_bin_with_transparent_background_2.png" id="2_dov7v"]
+
+[node name="Clicker" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(3.11887e-05, 0.984982, 0.99567, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1l2ym")
+expand_mode = 3
+
+[node name="WormBox" type="Node2D" parent="."]
+position = Vector2(579, 386)
+
+[node name="Sprite2D" type="Sprite2D" parent="WormBox"]
+position = Vector2(4, 36)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_dov7v")
+
+[node name="Timer" type="Timer" parent="WormBox"]
